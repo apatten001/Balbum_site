@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% extends 'music/base.html' %}
+
+{% block body %}
+
+
+<div class="container">
+  <div class="row">
+
+
+    {% for album in all_albums %}
+    <div class="row-sm">
+
+
+      <a href="{% url 'music:index' %}"><img src="{{album.album_logo}}" style="width:250px" >
+        <h1>{{album.album_title}}</h1>
+        <h3>{{ album.artist }}</h3></a>
+    </div>
+
+
+
+
+    {% endfor %}
+
+  </div>
+
+</div>
+
+{% endblock %}

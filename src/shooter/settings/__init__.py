@@ -1,0 +1,1 @@
+from .base import * # old settings identical as new settings
